@@ -1,0 +1,108 @@
+|blococontador
+led[0] <= bcd:inst24.led[0]
+led[1] <= bcd:inst24.led[1]
+led[2] <= bcd:inst24.led[2]
+led[3] <= bcd:inst24.led[3]
+led[4] <= bcd:inst24.led[4]
+led[5] <= bcd:inst24.led[5]
+led[6] <= bcd:inst24.led[6]
+vcc => flipflop:inst0.J
+vcc => flipflop:inst0.K
+reset => flipflop:inst0.reset
+reset => flipflop:inst2.reset
+reset => flipflop:inst1.reset
+reset => flipflop:inst3.reset
+clock => flipflop:inst0.clock
+clock => flipflop:inst2.clock
+clock => flipflop:inst1.clock
+clock => flipflop:inst3.clock
+gnd0 => flipflop:inst3.J
+gnd0 => flipflop:inst3.K
+
+
+|blococontador|bcd:inst24
+i0 => process_0.IN0
+i0 => process_0.IN0
+i0 => process_0.IN0
+i0 => process_0.IN0
+i1 => process_0.IN1
+i1 => process_0.IN1
+i1 => process_0.IN1
+i1 => process_0.IN1
+i2 => process_0.IN1
+i2 => process_0.IN1
+i2 => process_0.IN1
+i2 => process_0.IN1
+i2 => process_0.IN1
+i2 => process_0.IN1
+i3 => process_0.IN1
+i3 => process_0.IN1
+i3 => process_0.IN1
+i3 => process_0.IN1
+i3 => process_0.IN1
+i3 => process_0.IN1
+led[0] <= led[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
+led[1] <= led[1]$latch.DB_MAX_OUTPUT_PORT_TYPE
+led[2] <= led[2]$latch.DB_MAX_OUTPUT_PORT_TYPE
+led[3] <= led[3]$latch.DB_MAX_OUTPUT_PORT_TYPE
+led[4] <= led[4]$latch.DB_MAX_OUTPUT_PORT_TYPE
+led[5] <= led[5]$latch.DB_MAX_OUTPUT_PORT_TYPE
+led[6] <= led[6]$latch.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|blococontador|flipflop:inst0
+J => process_0.IN0
+J => process_0.IN0
+J => process_0.IN0
+J => process_0.IN0
+K => process_0.IN1
+K => process_0.IN1
+K => process_0.IN1
+K => process_0.IN1
+reset => temp.OUTPUTSELECT
+clock => temp.CLK
+s <= temp.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|blococontador|flipflop:inst1
+J => process_0.IN0
+J => process_0.IN0
+J => process_0.IN0
+J => process_0.IN0
+K => process_0.IN1
+K => process_0.IN1
+K => process_0.IN1
+K => process_0.IN1
+reset => temp.OUTPUTSELECT
+clock => temp.CLK
+s <= temp.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|blococontador|flipflop:inst2
+J => process_0.IN0
+J => process_0.IN0
+J => process_0.IN0
+J => process_0.IN0
+K => process_0.IN1
+K => process_0.IN1
+K => process_0.IN1
+K => process_0.IN1
+reset => temp.OUTPUTSELECT
+clock => temp.CLK
+s <= temp.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|blococontador|flipflop:inst3
+J => process_0.IN0
+J => process_0.IN0
+J => process_0.IN0
+J => process_0.IN0
+K => process_0.IN1
+K => process_0.IN1
+K => process_0.IN1
+K => process_0.IN1
+reset => temp.OUTPUTSELECT
+clock => temp.CLK
+s <= temp.DB_MAX_OUTPUT_PORT_TYPE
+
+
